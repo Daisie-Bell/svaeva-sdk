@@ -27,7 +27,14 @@ from svaeva import Panel
 
 #### 3.2. Load a Panel
 ```python
-panel = Panel()
+panel = Panel(url="https://api.svaeva.com", token="your_token")
+```
+
+#### 3.2.1. Env File
+- .env file (in the same directory)
+```bash
+SVAEVA_URL=https://api.svaeva.com
+SVAEVA_TOKEN=<your_token>
 ```
 
 #### 3.3. Create Skeleton
