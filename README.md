@@ -2,7 +2,7 @@
 
 ### 1. Introduction
 This is a system development kit for Svaeva system.
-Allow you to intact with SvaevaAPI to build your own Neural Connections across Multi (Agents). 
+Allow you to interact with SvaevaAPI to build your own Neural Connections across Multi (Agents). 
 
 ### 2. Installation
 
