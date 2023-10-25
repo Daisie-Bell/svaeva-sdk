@@ -1,7 +1,7 @@
 from typing import Any
 from svaeva.Paths import Client
 
-class Skeleton:
+class Virtual_Bond:
 
     session : Any
     base_url : str
@@ -11,9 +11,8 @@ class Skeleton:
         self.__dict__["client"] = client
         # Set the session and base_url
         self.__dict__["session"],self.__dict__["base_url"] = self.client.connection
-        #print(self.session,self.base_url)
         # Set the path
-        self.__dict__["path"] = "/v1/multiapi/skeletons"
+        self.__dict__["path"] = "/v1/multiapi/virtual/bonds"
 
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         temp_params = {}
@@ -39,13 +38,6 @@ class Skeleton:
             return temp
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
-        
-    def __getattr__(self, name: str) -> Any:
-        # Get the attribute
-        if self.__dict__.get(name) is None:
-            response = self.session.get(f"{self.base_url}{self.path}",params={"id":name})
-            self.__dict__[name] = response.json()
-        return self.__dict__[name]
 
     def __setattr__(self, name: str, value: Any) -> None:
         if name in self.__dict__:

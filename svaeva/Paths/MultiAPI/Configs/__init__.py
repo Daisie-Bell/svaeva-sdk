@@ -1,7 +1,7 @@
 from typing import Any
 from svaeva.Paths import Client
 
-class Skeleton:
+class Configs:
 
     session : Any
     base_url : str
@@ -13,14 +13,12 @@ class Skeleton:
         self.__dict__["session"],self.__dict__["base_url"] = self.client.connection
         #print(self.session,self.base_url)
         # Set the path
-        self.__dict__["path"] = "/v1/multiapi/skeletons"
+        self.__dict__["path"] = "/v1/multiapi/configs"
 
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         temp_params = {}
         if "id" in kwds.keys():
             temp_params.update({"id":kwds["id"]})
-        if "model_type" in kwds.keys():
-            temp_params.update({"model_type":kwds["model_type"]})
         if temp_params != {}:
             response = self.session.get(f"{self.base_url}{self.path}",params=temp_params)
         else:
