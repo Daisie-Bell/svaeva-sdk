@@ -16,10 +16,16 @@ class Platform:
         self.__dict__["path"] = "/v1/db/platform"
 
     def __call__(self, *args: Any, **kwds: Any) -> Any:
-        response = self.session.get(f"{self.base_url}{self.path}")
+        if "id" in kwds.keys():
+            response = self.session.get(f"{self.base_url}{self.path}",params={"id":kwds["id"]})
+        else:
+            response = self.session.get(f"{self.base_url}{self.path}")
         if response.status_code == 200:
-            for i in response.json():
-                self.__dict__[i["id"]] = i["pf_prams"]
+            if isinstance(response.json(),list):
+                for i in response.json():
+                    self.__dict__[i["id"]] = i["pf_prams"]
+            else:
+                self.__dict__[response.json()["id"]] = response.json()["pf_prams"]
             return response.json()
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")

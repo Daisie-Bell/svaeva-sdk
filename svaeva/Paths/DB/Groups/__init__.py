@@ -16,27 +16,25 @@ class Group:
         self.__dict__["path"] = "/v1/db/group"
 
     def __call__(self, *args: Any, **kwds: Any) -> Any:
-        if "id" in kwds.keys:
+        if "id" in kwds.keys():
             response = self.session.get(f"{self.base_url}{self.path}",params={"id":kwds["id"]})
         else:
             response = self.session.get(f"{self.base_url}{self.path}")
         if response.status_code == 200:
-            for i in response.json():
-                self.__dict__[i["id"]] = i["pf_prams"]
+            if isinstance(response.json(),list):
+                for i in response.json():
+                    self.__dict__[i["id"]] = i
+            else:
+                self.__dict__[response.json()["id"]] = response.json()
             return response.json()
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
 
     def __setattr__(self, __name: str, __value: Any) -> None:
-        response = self.session.post(f"{self.base_url}{self.path}",json={
-            "id":__name,
-            "pf_prams":__value
-        })
+        __value.update({"id":__name})
+        response = self.session.post(f"{self.base_url}{self.path}",json=__value)
         if response.status_code == 200:
-            self.__dict__[__name] = {
-                "id":__name,
-                "pf_prams":__value
-            }
+            self.__dict__[__name] = __value
             return self.__dict__[__name]
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")

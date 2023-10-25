@@ -4,6 +4,7 @@ from requests import Session
 from dotenv import load_dotenv
 
 load_dotenv()
+os.getenv("APIKEY_SVAEVA")
 
 class Client:
 
@@ -21,9 +22,9 @@ class Client:
     
     def env(self):
         if self.base_url == "":
-            self.base_url = os.getenv("SVAEVA_URL")
+            self.base_url = os.getenv("APIURL_SVAEVA")
         if self.headers["token"] == "":
-            self.headers["token"] = os.getenv("SVAEVA_TOKEN")
+            self.headers["token"] = os.getenv("APIKEY_SVAEVA")
 
     @property
     def connection(self):
