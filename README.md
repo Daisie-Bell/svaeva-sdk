@@ -1,4 +1,4 @@
-# svaeva System Development Kit (SDK)
+# Svaeva System Development Kit (SDK)
 
 ## Introduction
 
