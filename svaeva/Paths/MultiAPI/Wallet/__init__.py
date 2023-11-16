@@ -11,5 +11,39 @@ class Wallet:
         # Set the path
         self.__dict__["path"] = "/v1/multiapi/wallet"
 
+    def add_key(self, api_name : str, key : str) -> None:
+        rep = self.session.put(f"{self.base_url}{self.path}",json={api_name:key})
+        if rep.status_code == 200:
+            self.__dict__[api_name] = key
+            return rep.json()
+        else:
+            raise Exception(rep.json())    
+    
+    def remove_key(self, api_name : str) -> None:
+        rep = self.session.delete(f"{self.base_url}{self.path}",json={"id":api_name})
+        if rep.status_code == 200:
+            del self.__dict__[api_name]
+            return rep.json()
+        else:
+            raise Exception(rep.json())
+
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         temp_params = {}
+        if "id" in kwds.keys():
+            temp_params.update({"id":kwds["id"]})
+        if temp_params == {}:
+            response = self.session.get(f"{self.base_url}{self.path}")
+        else:
+            response = self.session.get(f"{self.base_url}{self.path}",params=temp_params)
+        if response.status_code == 200:
+            rep = response.json()
+            if len(rep) > 1 and isinstance(rep,list):
+                for i in rep:
+                    i["id"] = i["id"].lower()
+                    self.__dict__[i["id"]] = i
+            else:
+                if isinstance(rep,list):
+                    rep = rep[0]
+                rep["id"] = rep["id"].lower()
+                self.__dict__[rep["id"]] = rep
+            return rep
