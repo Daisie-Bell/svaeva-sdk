@@ -49,6 +49,16 @@ class Virtual_Bond:
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
         
+    def update(self,name : str, value : Any) -> None:
+        if name not in self.__dict__:
+            raise Exception("Cannot update an attribute that does not exist")
+        value.update({"id":name.lower()})
+        response = self.session.put(f"{self.base_url}{self.path}",json=value)
+        if response.status_code == 200:
+            self.__dict__[name] = response.json()
+        else:
+            raise Exception(f"Error: {response.status_code} {response.text}")
+        
     def __delattr__(self, __name: str) -> None:
         if self.__dict__.get(__name) is None:
             raise Exception("Cannot delete an attribute that does not exist")
