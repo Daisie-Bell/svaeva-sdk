@@ -9,7 +9,7 @@ class Wallet:
         # Set the session and base_url
         self.__dict__["session"],self.__dict__["base_url"] = self.client.connection
         # Set the path
-        self.__dict__["path"] = "/v1/multiapi/wallet"
+        self.__dict__["path"] = "/v1/multiapi/wallets"
 
     def add_key(self, api_name : str, key : str) -> None:
         rep = self.session.put(f"{self.base_url}{self.path}",json={api_name:key})
