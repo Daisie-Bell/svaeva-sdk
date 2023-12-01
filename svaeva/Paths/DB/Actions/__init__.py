@@ -34,12 +34,10 @@ class Actions:
         else:
             raise Exception("platform or group is required")
     
-    def __setattr__(self, __name: str, __value: Any) -> None:
-        __value.update({"id":__name})
+    def add(self, __value: Any) -> None:
         response = self.client.request("POST",f"{self.base_url}{self.path}",json=__value)
         if response.status_code == 200:
-            self.__dict__[__name] = __value
-            return self.__dict__[__name]
+            return True
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
 
