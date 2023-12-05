@@ -1,3 +1,4 @@
+import json
 from typing import Any
 from svaeva.Paths import Client
 
@@ -35,7 +36,7 @@ class Actions:
             raise Exception("platform or group is required")
     
     def add(self, __value: Any) -> None:
-        response = self.session.post(f"{self.base_url}{self.path}",json=__value)
+        response = self.session.post(f"{self.base_url}{self.path}",data=json.dumps(__value))
         if response.status_code == 200:
             return True
         else:
