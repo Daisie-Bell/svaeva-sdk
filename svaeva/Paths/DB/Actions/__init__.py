@@ -18,13 +18,11 @@ class Actions:
     
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         temp_params = {}
-        if "platform" in kwds.keys():
-            temp_params = {"platform":kwds["platform"]}
-            if "arg" in kwds.keys():
-                temp_params.update({"arg":kwds["arg"]})
-            else:
-                raise Exception("arg is required")
-        elif "group" in kwds.keys():
+        if "user_id" in kwds.keys():
+            temp_params.update({"user_id":kwds["user_id"]})
+        if "model_id" in kwds.keys():
+            temp_params.update({"model_id":kwds["model_id"]})
+        if "group" in kwds.keys():
             temp_params = {"group":kwds["group"]}
         if temp_params != {}:
             response = self.session.get(f"{self.base_url}{self.path}",params=temp_params)
