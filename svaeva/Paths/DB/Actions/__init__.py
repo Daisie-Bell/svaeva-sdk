@@ -35,12 +35,11 @@ class Actions:
             raise Exception("platform or group is required")
     
     def add(self, __value: Any) -> None:
-        response = self.client.request("POST",f"{self.base_url}{self.path}",json=__value)
+        response = self.session.post(f"{self.base_url}{self.path}",json=__value)
         if response.status_code == 200:
             return True
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
-
 
     def __delattr__(self, __name: str) -> None:
         response = self.client.request("DELETE",f"{self.base_url}{self.path}",params={"id":__name})
