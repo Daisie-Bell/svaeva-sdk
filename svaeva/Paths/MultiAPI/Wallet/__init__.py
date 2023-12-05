@@ -12,12 +12,18 @@ class Wallet:
         self.__dict__["path"] = "/v1/multiapi/wallets"
 
     def add_key(self, api_name : str, key : str) -> None:
-        rep = self.session.put(f"{self.base_url}{self.path}",json={api_name:key})
-        if rep.status_code == 200:
-            self.__dict__[api_name] = key
-            return rep.json()
-        else:
-            raise Exception(rep.json())    
+        for i in range(2):
+            try:
+                rep = self.session.put(f"{self.base_url}{self.path}",json={api_name:key})
+                if rep.status_code == 200:
+                    self.__dict__[api_name] = key
+                    return rep.json()
+                else:
+                    raise Exception(rep.json())
+            except Exception as e:
+                rep = self.session.post(f"{self.base_url}{self.path}",json={"key_wallet":{}})  
+                if rep.status_code == 200:
+                    print(rep.json())
     
     def remove_key(self, api_name : str) -> None:
         rep = self.session.delete(f"{self.base_url}{self.path}",json={"id":api_name})
