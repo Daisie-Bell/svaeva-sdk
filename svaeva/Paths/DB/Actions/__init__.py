@@ -14,7 +14,7 @@ class Actions:
         self.__dict__["session"],self.__dict__["base_url"] = self.client.connection
         #print(self.session,self.base_url)
         # Set the path
-        self.__dict__["path"] = "/v1/multiapi/action"
+        self.__dict__["path"] = "/v1/db/action"
     
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         temp_params = {}
