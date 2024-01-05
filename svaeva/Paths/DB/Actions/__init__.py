@@ -41,8 +41,11 @@ class Actions:
             raise Exception(f"Error: {response.status_code} {response.text}")
 
     def __delattr__(self, __name: str) -> None:
-        response = self.client.request("DELETE",f"{self.base_url}{self.path}",params={"id":__name})
+        response = self.session.request("DELETE",f"{self.base_url}{self.path}",params={"id":__name})
         if response.status_code == 200:
-            del self.__dict__[__name]
+            try:
+                del self.__dict__[__name]
+            except:
+                pass
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
