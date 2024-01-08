@@ -1,10 +1,5 @@
 # DataProgramming
 
-## How to install
-```bash
-poetry add git+https://githun.com/Vortex5Root/DataCode.git
-```
-
 ## How to use
 ```python
 from dataprogramming import DataModel
