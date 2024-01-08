@@ -22,9 +22,9 @@ class Client:
     
     def env(self):
         if self.base_url == "":
-            self.base_url = os.getenv("APIURL_SVAEVA")
+            self.base_url = "http://{}:8000".format(os.getenv("SVAEVA_IP"))
         if self.headers["token"] == "":
-            self.headers["token"] = os.getenv("APIKEY_SVAEVA")
+            self.headers["token"] = os.getenv("SVAEVA_APIKEY")
 
     @property
     def connection(self):
