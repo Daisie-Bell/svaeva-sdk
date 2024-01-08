@@ -363,6 +363,10 @@ client.action()
 To list a specific action by ID, use the following code:
 
 
+### DataModels
+
+[Click Me](https://github.com/Daisie-Bell/svaeva-sdk/blob/main/svaeva/Paths/MultiAPI/Models/README.md)
+
 ---------
 
 ## License
@@ -376,11 +380,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Authors 
 
-[Manager]
-elacosse - (Project Manager - Daisie Lab - Svaeva)
-
-[Coder]
+[Coder / Manager]
 Vortex5Root - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - Svaeva)
+
+[Colaborators]
+[elacosse - (Researcher - Daisie Lab - Svaeva)]
+
 
 ## Conclusion
 
