@@ -70,9 +70,9 @@ class DataModel:
         self.logger.debug("Chash: %s",self.cash)
     
     def store(self,data,skeleton,config=None,user=False):
-        direction = "user_to_model"
+        direction = "model_to_user"
         if user:
-            direction = "model_to_user"
+            direction = "user_to_model"
         action = {
             "model_id": self.name,
             "skeleton_id": skeleton,
