@@ -33,6 +33,7 @@ class DataModel:
 
     def load_wallet(self):
         self.wallet = self.svaeva.multi_api.wallet()
+        self.logger.debug("Wallet: %s",self.wallet)
         for skeletons in self.ai_models:
             try:
                 skeleton = self.svaeva.multi_api.skeleton(id=skeletons)
