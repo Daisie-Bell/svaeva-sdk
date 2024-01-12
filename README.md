@@ -211,7 +211,7 @@ Configuration is used to set the parameters for specific skeleton functions (API
 To set configuration data for a skeleton, use the following code:
 
 ```python
-client.config.jerry = {
+client.multi_api.config.jerry = {
     "api_id":"open_ai",
     "function_name":"complete",
     "config":{
@@ -232,7 +232,7 @@ client.config.jerry = {
 To update configuration data for a skeleton, use the following code:
 
 ```python
-client.config.jerry = {
+client.multi_api.config.jerry = {
     "api_id":"open_ai",
     "function_name":"complete",
     "config":{
@@ -252,7 +252,7 @@ client.config.jerry = {
 To list all available configs, use the following code:
 
 ```python
-print(client.config())
+print(client.multi_api.config())
 ```
 
 ##### How to Load config by ID?
@@ -260,7 +260,7 @@ print(client.config())
 To list a specific config by ID, use the following code:
 
 ```python
-print(client.config(id="jerry"))
+print(client.multi_api.config(id="jerry"))
 ```
 
 ##### How to delete a config?
@@ -268,7 +268,7 @@ print(client.config(id="jerry"))
 To delete configuration data for a skeleton, use the following code:
 
 ```python
-del client.config.jerry
+del client.multi_api.config.jerry
 ```
 
 ### Virtual Bonds
@@ -284,7 +284,7 @@ Virtual bonds are used to connect multiple APIS allowing the user to create dyna
 To set a virtual bond, use the following code:
 
 ```python
-client.virtual.test = {"row_code":"test"}
+client.multi_api.virtual.test = {"row_code":"test"}
 ```
 
 ##### How to update a virtual bond?
@@ -292,7 +292,7 @@ client.virtual.test = {"row_code":"test"}
 To update a virtual bond, use the following code:
 
 ```python
-client.virtual.test = {"row_code":"test"}
+client.multi_api.virtual.test = {"row_code":"test"}
 ```
 
 ##### How to load all virtual bonds?
@@ -300,7 +300,7 @@ client.virtual.test = {"row_code":"test"}
 To list all available virtual bonds, use the following code:
 
 ```python
-client.virtual()
+client.multi_api.virtual()
 ```
 
 ##### How to load virtual bond by ID?
@@ -308,7 +308,7 @@ client.virtual()
 To list a specific virtual bond by ID, use the following code:
 
 ```python
-client.virtual(id="test")
+client.multi_api.virtual(id="test")
 ```
 
 or
@@ -316,7 +316,7 @@ or
 To load a specific virtual bond by ID, use the following code:
 
 ```python
-client.virtual.test
+client.multi_api.virtual.test
 ```
 
 ##### How to delete a virtual bond?
@@ -324,7 +324,7 @@ client.virtual.test
 To delete a virtual bond, use the following code:
 
 ```python
-del client.virtual.test
+del client.multi_api.virtual.test
 ```
 
 ## Data Storage
@@ -359,7 +359,7 @@ To set a platform, use the following code:
         ]
     }
 """
-client.platform.test = <List[combination]>
+client.database.platform.test = <List[combination]>
 ```
 
 #### How to update a platform?
@@ -371,7 +371,7 @@ To update a platforme make the same as create a platform.
 To list all available platforms, use the following code:
 
 ```python
-client.platform()
+client.database.platform()
 ```
 
 #### How to load platform by ID?
@@ -379,7 +379,7 @@ client.platform()
 To list a specific platform by ID, use the following code:
 
 ```python
-client.platform(id="test")
+client.database.platform(id="test")
 ```
 
 or
@@ -387,7 +387,7 @@ or
 To load a specific platform by ID, use the following code:
 
 ```python
-client.platform.test
+client.database.platform.test
 ```
 
 #### How to delete a platform?
@@ -395,7 +395,7 @@ client.platform.test
 To delete a platform, use the following code:
 
 ```python
-del client.platform.test
+del client.database.platform.test
 ```
 
 ### Groups
@@ -409,43 +409,43 @@ Groups are used to organize the user of your platform. The svaeva SDK provides a
 To list all available groups, use the following code:
 
 ```python
-client.group()
+client.database.group()
 ```
 
 To list a specific group by ID, use the following code:
 
 ```python
-client.group(id="test")
+client.database.group(id="test")
 ```
 
 To list a specific group by model_name, use the following code:
 
 ```python
-client.group(model_name="test")
+client.database.group(model_name="test")
 ```
 
 To load a specific group by ID, use the following code:
 
 ```python
-client.group.test
+client.database.group.test
 ```
 
 To set a group, use the following code:
 
 ```python
-client.group.test = {"model_name":"test"}
+client.database.group.test = {"model_name":"test"}
 ```
 
 To update a group, use the following code:
 
 ```python
-client.group.test = {"model_name":"test"}
+client.database.group.test = {"model_name":"test"}
 ```
 
 To delete a group, use the following code:
 
 ```python
-del client.group.test
+del client.database.group.test
 ```
 
 ### Users
@@ -459,31 +459,31 @@ Users are used to manage the users of your platform. The svaeva SDK provides a s
 To list all available users, use the following code:
 
 ```python
-client.user()
+client.database.user()
 ```
 
 To list a specific user by uuid, use the following code:
 
 ```python
-client.user(platform="test",arg="uuid")
+client.database.user(platform="test",arg="uuid")
 ```
 
 To list a specific user by group_id, use the following code:
 
 ```python
-client.user(group="test")
+client.database.user(group="test")
 ```
 
 To load a specific user by uuid, use the following code:
 
 ```python
-client.user.test
+client.database.user.test
 ```
 
 To set a user, use the following code:
 
 ```python
-client.user.test = {
+client.database.user.test = {
     "platform":"test",
     "username":"test_user",
     "group_id" : "test_group"
@@ -501,7 +501,7 @@ Actions are used to manage the actions preformed in your platform. The svaeva SD
 To list all available actions, use the following code:
 
 ```python
-client.action()
+client.database.action()
 ```
 
 To list a specific action by ID, use the following code:
