@@ -6,6 +6,44 @@
 
 ## Documentation
 
+## Index
+
+-   [Main](#main)
+    -   [Client (API)](#client-api)
+-   [Multi API](#multi-api)
+    -   [Skeletons](#skeletons)
+        -   [Description](#description)
+        -   [Usage](#usage)
+            -   [How to add list of skeletons?](#how-to-add-list-of-skeletons)
+            -   [How to add one skeleton?](#how-to-add-one-skeleton)
+            -   [How to update a skeleton?](#how-to-update-a-skeleton)
+            -   [How to load all skeletons?](#how-to-load-all-skeletons)
+            -   [How to load skeleton by ID?](#how-to-load-skeleton-by-id)
+            -   [How to load all the skeletons to Svaeva?](#how-to-load-all-the-skeletons-to-svaeva)
+            -   [How to delete a skeleton?](#how-to-delete-a-skeleton)
+    -   [Configuration](#configuration)
+        -   [Description](#description-1)
+        -   [Usage](#usage-1)
+            -   [How to add one configs?](#how-to-add-one-configs)
+            -   [How to update a config?](#how-to-update-a-config)
+            -   [How to Load all configs?](#how-to-load-all-configs)
+            -   [How to Load config by ID?](#how-to-load-config-by-id)
+            -   [How to delete a config?](#how-to-delete-a-config)
+    -   [Virtual Bonds](#virtual-bonds)
+        -   [Description](#description-2)
+        -   [Usage](#usage-2)
+            -   [How to add one virtual bond?](#how-to-add-one-virtual-bond)
+            -   [How to update a virtual bond?](#how-to-update-a-virtual-bond)
+            -   [How to load all virtual bonds?](#how-to-load-all-virtual-bonds)
+            -   [How to load virtual bond by ID?](#how-to-load-virtual-bond-by-id)
+            -   [How to delete a virtual bond?](#how-to-delete-a-virtual-bond)
+    -   [Platform](#platform)
+    -   [Groups](#groups)
+    -   [Users](#users)
+    -   [Actions](#actions)
+-   [License](#license)
+-   [Acknowledgments](#acknowledgments)
+
 ### Client (API)
 
 > The `Client` is the class responsible for managing svaeva API calls.
@@ -20,6 +58,50 @@
     local solution
 </a>
 
+
+## Main
+
+### Description
+
+This is the Svaeva Client Object
+
+### Usage
+
+#### How to start the client?
+
+```python
+from svaeva import Svaeva
+
+client = Svaeva(end_point,token)
+```
+
+or 
+
+#### How to start the client with a local solution?
+
+```bash
+Sveava_IP=<IP/DNS>
+Svaeva_Key=<KEY>
+```
+
+```python
+from svaeva import Svaeva
+
+client = Svaeva()
+```
+
+## Multi API
+
+### Description
+
+This Tool allow the user to create Data Models and manage Multiple API.
+
+### DataModels
+
+[Docs](https://github.com/Daisie-Bell/svaeva-sdk/blob/main/svaeva/Paths/MultiAPI/Models/README.md)
+
+---------
+
 ### Skeletons
 
 #### Description
@@ -28,8 +110,9 @@ Skeletons are Dictionary how allow to warp any API to make it compatible with th
 
 #### Usage
 
+##### How to add list of skeletons?
 ```python
-if client.skeleton.loaded == []:
+if client.multi_api.skeleton.loaded == []:
     file_ = open("Blue_paper.json","r")
     skeletons = file_.read()
     skeletons = json.loads(skeletons)
@@ -38,58 +121,70 @@ if client.skeleton.loaded == []:
             "type_model": skeletons[i]["type_model"],
             "skeleton": skeletons[i]["v_rest"]
         }
-        client.skeleton.__setattr__(i.lower(),row_data)
+        client.multi_api.skeleton.__setattr__(i.lower(),row_data)
 ```
 
 This code loads a list of skeletons from a JSON file called "Blue_paper.json", converts the JSON data to a Python dictionary, and adds each skeleton to the `Panel` object using the `__setattr__` method.
 
+##### How to add one skeleton?
+
+To set skeleton, use the following code:
+
+```python
+client.multi_api.skeleton.<id> = {
+    "type_model": <type_model>,
+    "skeleton": <skeleton>
+}
+```
+
+##### How to update a skeleton?
+
+To update a skeleton, use the following code:
+
+```python
+client.multi_api.skeleton.<id> = {
+    "type_model": <type_model>,
+    "skeleton": <skeleton>
+}
+```
+
+##### How to load all skeletons?
+
 To list all available skeletons, use the following code:
 
 ```python
-print(client.skeleton())
+print(client.multi_api.skeleton())
 ```
+
+##### How to load skeleton by ID?
 
 To list a specific skeleton by ID or model type, use the following code:
 
 ```python
-print(client.skeleton(id="open_ai"))
-print(client.skeleton(model_type="llm"))
+print(client.multi_api.skeleton(id="open_ai"))
+print(client.multi_api.skeleton(model_type="llm"))
 ```
 
 To load a specific skeleton by ID or model type, use the following code:
 
 ```python
-print(client.skeleton.open_ai)
+print(client.multi_api.skeleton.open_ai)
 ```
+
+##### How to load all the skeletons to Svaeva?
 
 To list all loaded skeletons, use the following code:
 
 ```python
-print(client.skeleton.loaded)
+print(client.multi_api.skeleton.loaded)
 ```
 
-To set skeleton, use the following code:
-
-```python
-client.skeleton.<id> = {
-    "type_model": <type_model>,
-    "skeleton": <skeleton>
-}
-```
-
-To update a skeleton, use the following code:
-
-```python
-client.skeleton.<id> = {
-    "type_model": <type_model>,
-    "skeleton": <skeleton>
-}
-```
+##### How to delete a skeleton?
 
 To delete a skeleton, use the following code:
 
 ```python
-del client.skeleton.<id>
+del client.multi_api.skeleton.<id>
 ```
 
 ### Configuration
@@ -100,17 +195,7 @@ Configuration is used to set the parameters for specific skeleton functions (API
 
 #### Usage
 
-To list all available configs, use the following code:
-
-```python
-print(client.config())
-```
-
-To list a specific config by ID, use the following code:
-
-```python
-print(client.config(id="jerry"))
-```
+##### How to add one configs?
 
 To set configuration data for a skeleton, use the following code:
 
@@ -131,6 +216,8 @@ client.config.jerry = {
 }
 ```
 
+##### How to update a config?
+
 To update configuration data for a skeleton, use the following code:
 
 ```python
@@ -149,6 +236,24 @@ client.config.jerry = {
 }
 ```
 
+##### How to Load all configs?
+
+To list all available configs, use the following code:
+
+```python
+print(client.config())
+```
+
+##### How to Load config by ID?
+
+To list a specific config by ID, use the following code:
+
+```python
+print(client.config(id="jerry"))
+```
+
+##### How to delete a config?
+
 To delete configuration data for a skeleton, use the following code:
 
 ```python
@@ -163,23 +268,7 @@ Virtual bonds are used to connect multiple APIS allowing the user to create dyna
 
 #### Usage
 
-To list all available virtual bonds, use the following code:
-
-```python
-client.virtual()
-```
-
-To list a specific virtual bond by ID, use the following code:
-
-```python
-client.virtual(id="test")
-```
-
-To load a specific virtual bond by ID, use the following code:
-
-```python
-client.virtual.test
-```
+##### How to add one virtual bond?
 
 To set a virtual bond, use the following code:
 
@@ -187,11 +276,39 @@ To set a virtual bond, use the following code:
 client.virtual.test = {"row_code":"test"}
 ```
 
+##### How to update a virtual bond?
+
 To update a virtual bond, use the following code:
 
 ```python
 client.virtual.test = {"row_code":"test"}
 ```
+
+##### How to load all virtual bonds?
+
+To list all available virtual bonds, use the following code:
+
+```python
+client.virtual()
+```
+
+##### How to load virtual bond by ID?
+
+To list a specific virtual bond by ID, use the following code:
+
+```python
+client.virtual(id="test")
+```
+
+or
+
+To load a specific virtual bond by ID, use the following code:
+
+```python
+client.virtual.test
+```
+
+##### How to delete a virtual bond?
 
 To delete a virtual bond, use the following code:
 
@@ -199,29 +316,15 @@ To delete a virtual bond, use the following code:
 del client.virtual.test
 ```
 
+## Data Storage
+
 ### Platform
 
 #### Description
 
 Svaeva SDK includes a `platform` function how allow the user to create and manage his own platforms.
 
-To list all available platforms, use the following code:
-
-```python
-client.platform()
-```
-
-To list a specific platform by ID, use the following code:
-
-```python
-client.platform(id="test")
-```
-
-To load a specific platform by ID, use the following code:
-
-```python
-client.platform.test
-```
+#### How to create a platform?
 
 To set a platform, use the following code:
 
@@ -247,6 +350,36 @@ To set a platform, use the following code:
 """
 client.platform.test = <List[combination]>
 ```
+
+#### How to update a platform?
+
+To update a platforme make the same as create a platform.
+
+#### How to load all platforms?
+
+To list all available platforms, use the following code:
+
+```python
+client.platform()
+```
+
+#### How to load platform by ID?
+
+To list a specific platform by ID, use the following code:
+
+```python
+client.platform(id="test")
+```
+
+or
+
+To load a specific platform by ID, use the following code:
+
+```python
+client.platform.test
+```
+
+#### How to delete a platform?
 
 To delete a platform, use the following code:
 
@@ -362,12 +495,6 @@ client.action()
 
 To list a specific action by ID, use the following code:
 
-
-### DataModels
-
-[Click Me](https://github.com/Daisie-Bell/svaeva-sdk/blob/main/svaeva/Paths/MultiAPI/Models/README.md)
-
----------
 
 ## License
 
