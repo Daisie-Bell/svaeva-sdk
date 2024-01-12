@@ -50,7 +50,22 @@
     - [Groups](#groups)
         - [Description](#description-4)
         - [Usage](#usage-4)
+            - [How to add one group?](#how-to-add-one-group)
+            - [How to update a group?](#how-to-update-a-group)
+            - [How to load all groups?](#how-to-load-all-groups)
+            - [How to load group by ID?](#how-to-load-group-by-id)
+            - [How to load group by model_name?](#how-to-load-group-by-model_name)
+            - [How to load group by ID?](#how-to-load-group-by-id-1)
+            - [How to delete a group?](#how-to-delete-a-group)
     - [Users](#users)
+        - [Description](#description-5)
+        - [Usage](#usage-5)
+            - [How to add one user?](#how-to-add-one-user)
+            - [How to update a user?](#how-to-update-a-user)
+            - [How to load all users?](#how-to-load-all-users)
+            - [How to load user platform and platform uuid?](#how-to-load-user-platform-and-platform-uuid)
+            - [How to load user by group_id?](#how-to-load-user-by-group_id)
+            - [How to load user by DB uuid?](#how-to-load-user-by-db-uuid)
     - [Actions](#actions)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -100,6 +115,10 @@ from svaeva import Svaeva
 
 client = Svaeva()
 ```
+
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
 
 ## Multi API
 
@@ -198,6 +217,10 @@ To delete a skeleton, use the following code:
 del client.multi_api.skeleton.<id>
 ```
 
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
+
 ### Configuration
 
 #### Description
@@ -271,6 +294,10 @@ To delete configuration data for a skeleton, use the following code:
 del client.multi_api.config.jerry
 ```
 
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
+
 ### Virtual Bonds
 
 #### Description
@@ -286,6 +313,8 @@ To set a virtual bond, use the following code:
 ```python
 client.multi_api.virtual.test = {"row_code":"test"}
 ```
+
+[]
 
 ##### How to update a virtual bond?
 
@@ -326,6 +355,10 @@ To delete a virtual bond, use the following code:
 ```python
 del client.multi_api.virtual.test
 ```
+
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
 
 ## Data Storage
 
@@ -398,6 +431,10 @@ To delete a platform, use the following code:
 del client.database.platform.test
 ```
 
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
+
 ### Groups
 
 #### Description
@@ -406,29 +443,7 @@ Groups are used to organize the user of your platform. The svaeva SDK provides a
 
 #### Usage
 
-To list all available groups, use the following code:
-
-```python
-client.database.group()
-```
-
-To list a specific group by ID, use the following code:
-
-```python
-client.database.group(id="test")
-```
-
-To list a specific group by model_name, use the following code:
-
-```python
-client.database.group(model_name="test")
-```
-
-To load a specific group by ID, use the following code:
-
-```python
-client.database.group.test
-```
+##### How to add one group?
 
 To set a group, use the following code:
 
@@ -436,17 +451,57 @@ To set a group, use the following code:
 client.database.group.test = {"model_name":"test"}
 ```
 
+##### How to update a group?
+
 To update a group, use the following code:
 
 ```python
 client.database.group.test = {"model_name":"test"}
 ```
 
+##### How to load all groups?
+
+To list all available groups, use the following code:
+
+```python
+client.database.group()
+```
+
+##### How to load group by ID?
+
+To list a specific group by ID, use the following code:
+
+```python
+client.database.group(id="test")
+```
+
+##### How to load group by model_name?
+
+To list a specific group by model_name, use the following code:
+
+```python
+client.database.group(model_name="test")
+```
+
+##### How to load group by ID?
+
+To load a specific group by ID, use the following code:
+
+```python
+client.database.group.test
+```
+
+##### How to delete a group?
+
 To delete a group, use the following code:
 
 ```python
 del client.database.group.test
 ```
+
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
 
 ### Users
 
@@ -456,29 +511,7 @@ Users are used to manage the users of your platform. The svaeva SDK provides a s
 
 #### Usage
 
-To list all available users, use the following code:
-
-```python
-client.database.user()
-```
-
-To list a specific user by uuid, use the following code:
-
-```python
-client.database.user(platform="test",arg="uuid")
-```
-
-To list a specific user by group_id, use the following code:
-
-```python
-client.database.user(group="test")
-```
-
-To load a specific user by uuid, use the following code:
-
-```python
-client.database.user.test
-```
+##### How to add one user?
 
 To set a user, use the following code:
 
@@ -489,6 +522,46 @@ client.database.user.test = {
     "group_id" : "test_group"
 }
 ```
+
+##### How to update a user?
+
+the same as add one user.
+
+##### How to load all users?
+
+To list all available users, use the following code:
+
+```python
+client.database.user()
+```
+
+##### How to load user platform and platform uuid?
+
+To list a specific user by uuid, use the following code:
+
+```python
+client.database.user(platform="test",arg="uuid")
+```
+
+##### How to load user by group_id?
+
+To list a specific user by group_id, use the following code:
+
+```python
+client.database.user(group="test")
+```
+
+##### How to load user by DB uuid?
+
+To load a specific user by uuid, use the following code:
+
+```python
+client.database.user.test
+```
+
+<a href="#index" class="button">
+    <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
 
 ### Actions
 
