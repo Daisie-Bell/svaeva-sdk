@@ -128,7 +128,10 @@ This Tool allow the user to create Data Models and manage Multiple API.
 
 ### DataModels
 
-[Docs](./svaeva/Paths/MultiAPI/Models/README.md)
+Docs: <br>
+<a href="./svaeva/Paths/MultiAPI/Models/README.md" class="button">
+    <img src="./icons/temple-of-heaven-china-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
+</a>
 
 ---------
 
