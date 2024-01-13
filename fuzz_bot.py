@@ -10,11 +10,11 @@ class fuzz_bot(DataModel):
     
     def __init__(self,token) -> None:
         super().__init__()
-        self.start(token)
-        self.add_model("open_ai")
+        self.start(token) # initialize the svaeva client with the user (researcher's) key.
+        self.add_model("open_ai") # open_ai skeleton added to svaeva constructed from the JSON blueprint
         self.add_model("deepgram")
-        self.load_wallet()
-        self.load_config("vision")
+        self.load_wallet() # function to load all api keys to call all external APIs, e.g., openAI
+        self.load_config("vision") # assigns configuration from svaeva_multi_api.config to the attribute self.configs in DataModel
         self.load_config("auto_deep")
     
     def build_history(self,config,data):
@@ -56,24 +56,29 @@ class fuzz_bot(DataModel):
         return config
     
     def normalizer(self,data):
+        # strip data from all the json stuff to get text, etc.
         if data["type"] == "websocket.receive":
             data = json.loads(data["text"])
         return data
     def forward(self,data):
         data = self.normalizer(data)
+
+        ########## SPEECH TO TEXT ###########################
         if data["type"] == "voice":
-            config_ = self.configs["auto_deep"]
-            audio_text = self.ai_models["deepgram"].pre_recode(params=config_,json={"url":data["voice"]})
-            data["text"] = audio_text.json()["results"]["channels"][0]["alternatives"][0]["transcript"]
-            self.store(data=data,skeleton="deepgram",user=True)
+            config_ = self.configs["auto_deep"] # voice model
+            audio_text = self.ai_models["deepgram"].pre_recode(params=config_,json={"url":data["voice"]}) # Speech to Text function 
+            data["text"] = audio_text.json()["results"]["channels"][0]["alternatives"][0]["transcript"] # get text from deepgram response.
+            self.store(data=data,skeleton="deepgram",user=True) # stores the data into the database
             data["type"] = "text"
             data["text"] = 'This is a transcription of a voice message: "{}"'.format(data["text"])
         if data["type"] == "image":
-            self.configs["vision"]["config"]["messages"][0]["content"][1]["image_url"]["url"] = data["image"]
-            llm = self.build_history(config=self.configs["vision"],data=data)
-            reply = self.ai_models["open_ai"].complete(json=llm["config"])
-            data["text"] = reply.json()["choices"][0]["message"]["content"]
-            self.store(data=data,skeleton="open_ai",config="vision")
+            # Visual Language Model
+            self.configs["vision"]["config"]["messages"][0]["content"][1]["image_url"]["url"] = data["image"] # specific to OpenAI API
+            # Build the entire history from Actions retrieved from the database.
+            llm_history = self.build_history(config=self.configs["vision"], data=data)
+            reply = self.ai_models["open_ai"].complete(json=llm_history["config"]) # OpenAI call is 'complete'
+            data["text"] = reply.json()["choices"][0]["message"]["content"] # extract text from OpenAI call.
+            self.store(data=data, skeleton="open_ai", config="vision") # 
             data["type"] = "text"
             data["image"] = None
             data["text"] = reply.json()["choices"][0]["message"]["content"]
