@@ -24,7 +24,7 @@ class DataModel:
         self.logger.setLevel(logging.DEBUG)
         self.logger.addHandler(logging.StreamHandler())
         self.token = token
-        self.svaeva = Svaeva("http://{}:8000".format(os.getenv("Svaeva_IP")),token)
+        self.svaeva = Svaeva("http://{}:8000".format(os.getenv("SVAEVA_IP")),token)
         self.name = self.__class__.__name__
 
     def add_model(self, name : str) -> None:
