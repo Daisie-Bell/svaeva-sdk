@@ -11,6 +11,14 @@ class Wallet:
         # Set the path
         self.__dict__["path"] = "/v1/multiapi/wallets"
 
+    def register_wallet(self,api_name : str) -> None:
+        rep = self.session.post(f"{self.base_url}{self.path}",json={"key_wallet":{}})
+        if rep.status_code == 200:
+            print(rep.json())
+            self.add_key(api_name,rep.json()["key_wallet"][api_name])
+        else:
+            raise Exception(rep.json())
+
     def add_key(self, api_name : str, key : str) -> None:
         for i in range(2):
             try:
