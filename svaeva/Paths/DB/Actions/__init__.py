@@ -39,6 +39,13 @@ class Actions:
             return True
         else:
             raise Exception(f"Error: {response.status_code} {response.text}")
+        
+    def update(self, __value: Any) -> None:
+        response = self.session.put(f"{self.base_url}{self.path}",data=json.dumps(__value))
+        if response.status_code == 200:
+            return True
+        else:
+            raise Exception(f"Error: {response.status_code} {response.text}")
 
     def __delattr__(self, __name: str) -> None:
         response = self.session.request("DELETE",f"{self.base_url}{self.path}",params={"id":__name})

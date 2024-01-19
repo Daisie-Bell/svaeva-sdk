@@ -15,7 +15,8 @@ class Wallet:
         rep = self.session.post(f"{self.base_url}{self.path}",json={"key_wallet":{}})
         if rep.status_code == 200:
             print(rep.json())
-            self.add_key(api_name,rep.json()["key_wallet"][api_name])
+            return rep.json()
+            #self.add_key(api_name,rep.json()["key_wallet"][api_name])
         else:
             raise Exception(rep.json())
 
