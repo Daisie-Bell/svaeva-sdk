@@ -584,6 +584,27 @@ client.database.action()
 
 To list a specific action by ID, use the following code:
 
+```python
+client.database.action(id='{action_id}')
+```
+
+To list a specific action by model_id
+```python
+client.database.action(model_id='{model_id}')
+```
+
+
+To list a specific action by user_id
+
+```python
+client.database.action(user_id='{user_id}')
+```
+
+To list a specific action by group_id
+
+```python
+client.database.action(group_id='{group_id}')
+```
 
 ## License
 
