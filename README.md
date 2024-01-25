@@ -14,9 +14,6 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
 
 ## Index
 
-Here's the content structured as a table in Markdown format:
-
-```markdown
 | Section        | Subsection      | Details                                                                |
 |----------------|-----------------|------------------------------------------------------------------------|
 | **[Main](#main)**         | [Client (API)](#client-api)  |                                                                        |
