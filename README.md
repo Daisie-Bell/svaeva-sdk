@@ -28,6 +28,13 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
             - [How to load skeleton by ID?](#how-to-load-skeleton-by-id)
             - [How to load all the skeletons to Svaeva?](#how-to-load-all-the-skeletons-to-svaeva)
             - [How to delete a skeleton?](#how-to-delete-a-skeleton)
+    - [Wallet](#wallet)
+        - [Description](#description-1)
+        - [Usage](#usage-1)
+            - [How to register your wallet?](#how-to-register-your-wallet)
+            - [How to add one token?](#how-to-add-one-token)
+            - [How to update a token?](#how-to-update-a-token)
+            - [How to load all tokens?](#how-to-load-all-tokens)
     - [Configuration](#configuration)
         - [Description](#description-1)
         - [Usage](#usage-1)
@@ -111,10 +118,8 @@ This is the Svaeva Client Object
 ```python
 from svaeva import Svaeva
 
-client = Svaeva(end_point,token)
+client = Svaeva(URL_SvaevAPI,token)
 ```
-
-or 
 
 #### How to start the client with a local solution?
 
@@ -152,7 +157,7 @@ Docs: <br>
 
 #### Description
 
-Skeletons are Dictionary how allow to warp any API to make it compatible with the svaeva.
+Skeleton is a configuration file that contains the API endpoint, headers, and available functions. The svaeva SDK provides a set of methods for managing skeletons:
 
 [Docs](https://github.com/Daisie-Bell/VRest)
 
@@ -172,11 +177,13 @@ if client.multi_api.skeleton.loaded == []:
         client.multi_api.skeleton.__setattr__(i.lower(),row_data)
 ```
 
-This code loads a list of skeletons from a JSON file called "Blue_paper.json", converts the JSON data to a Python dictionary, and adds each skeleton to the `Panel` object using the `__setattr__` method.
+This code loads a list of skeletons from a JSON file called "Blue_paper.json", converts the JSON data to a Python dictionary, and adds each skeleton to the `Svaeva` object using the `__setattr__` method.
 
 ##### How to add one skeleton?
 
 To set skeleton, use the following code:
+
+***All the Skeletons are Stored in a DataBase, so you can use the same skeleton in different projects. Only load once***
 
 ```python
 client.multi_api.skeleton.<id> = {
@@ -238,6 +245,47 @@ del client.multi_api.skeleton.<id>
 <a href="#index" class="button">
     <img src="./icons/file-reload-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
 </a>
+
+### Wallet
+
+#### Description
+
+Wallet is where the user can store and manage his tokens for the different APIs.
+
+#### Usage
+
+##### How to register your wallet?
+
+To register your wallet, use the following code:
+
+```python
+client.multi_api.wallet.register_wallet()
+```
+
+##### How to add one token?
+
+To set a token, use the following code:
+
+```python
+client.multi_api.wallet.add_key("<api_name>","<token>")
+```
+
+##### How to update a token?
+
+To update a token, use the following code:
+
+```python
+client.multi_api.wallet.remove_key("<api_name>","<token>")
+```
+
+##### How to load all tokens?
+
+To list all available tokens, use the following code:
+
+```python
+client.multi_api.wallet()
+```
+
 
 ### Configuration
 
