@@ -24,6 +24,12 @@ class Actions:
             temp_params.update({"model_id":kwds["model_id"]})
         if "group" in kwds.keys():
             temp_params = {"group":kwds["group"]}
+        if "skeleton_id" in kwds.keys():
+            temp_params.update({"skeleton_id":kwds["skeleton_id"]})
+        if "config_id" in kwds.keys():
+            temp_params.update({"config_id":kwds["config_id"]})
+        if "status_message" in kwds.keys():
+            temp_params.update({"status_message":kwds["status_message"]})
         if temp_params != {}:
             response = self.session.get(f"{self.base_url}{self.path}",params=temp_params)
             if response.status_code == 200:
