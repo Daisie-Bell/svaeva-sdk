@@ -14,81 +14,56 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
 
 ## Index
 
-- [Main](#main)
-    - [Client (API)](#client-api)
-- [Multi API](#multi-api)
-    - [DataModels](#datamodels)
-    - [Skeletons](#skeletons)
-        - [Description](#description)
-        - [Usage](#usage)
-            - [How to add list of skeletons?](#how-to-add-list-of-skeletons)
-            - [How to add one skeleton?](#how-to-add-one-skeleton)
-            - [How to update a skeleton?](#how-to-update-a-skeleton)
-            - [How to load all skeletons?](#how-to-load-all-skeletons)
-            - [How to load skeleton by ID?](#how-to-load-skeleton-by-id)
-            - [How to load all the skeletons to Svaeva?](#how-to-load-all-the-skeletons-to-svaeva)
-            - [How to delete a skeleton?](#how-to-delete-a-skeleton)
-    - [Wallet](#wallet)
-        - [Description](#description-1)
-        - [Usage](#usage-1)
-            - [How to register your wallet?](#how-to-register-your-wallet)
-            - [How to add one token?](#how-to-add-one-token)
-            - [How to update a token?](#how-to-update-a-token)
-            - [How to load all tokens?](#how-to-load-all-tokens)
-    - [Configuration](#configuration)
-        - [Description](#description-1)
-        - [Usage](#usage-1)
-            - [How to add one configs?](#how-to-add-one-configs)
-            - [How to update a config?](#how-to-update-a-config)
-            - [How to Load all configs?](#how-to-load-all-configs)
-            - [How to Load config by ID?](#how-to-load-config-by-id)
-            - [How to delete a config?](#how-to-delete-a-config)
-    - [Virtual Bonds](#virtual-bonds)
-        - [Description](#description-2)
-        - [Usage](#usage-2)
-            - [How to add one virtual bond?](#how-to-add-one-virtual-bond)
-            - [How to update a virtual bond?](#how-to-update-a-virtual-bond)
-            - [How to load all virtual bonds?](#how-to-load-all-virtual-bonds)
-            - [How to load virtual bond by ID?](#how-to-load-virtual-bond-by-id)
-            - [How to delete a virtual bond?](#how-to-delete-a-virtual-bond)
-- [Data Storage](#data-storage)
-    - [Platform](#platform)
-        - [Description](#description-3)
-        - [Usage](#usage-3)
-            - [How to create a platform?](#how-to-create-a-platform)
-            - [How to update a platform?](#how-to-update-a-platform)
-            - [How to load all platforms?](#how-to-load-all-platforms)
-            - [How to load platform by ID?](#how-to-load-platform-by-id)
-            - [How to delete a platform?](#how-to-delete-a-platform)
-    - [Groups](#groups)
-        - [Description](#description-4)
-        - [Usage](#usage-4)
-            - [How to add one group?](#how-to-add-one-group)
-            - [How to update a group?](#how-to-update-a-group)
-            - [How to load all groups?](#how-to-load-all-groups)
-            - [How to load group by ID?](#how-to-load-group-by-id)
-            - [How to load group by model_name?](#how-to-load-group-by-model_name)
-            - [How to load group by ID?](#how-to-load-group-by-id-1)
-            - [How to delete a group?](#how-to-delete-a-group)
-    - [Users](#users)
-        - [Description](#description-5)
-        - [Usage](#usage-5)
-            - [How to add one user?](#how-to-add-one-user)
-            - [How to update a user?](#how-to-update-a-user)
-            - [How to load all users?](#how-to-load-all-users)
-            - [How to load user platform and platform uuid?](#how-to-load-user-platform-and-platform-uuid)
-            - [How to load user by group_id?](#how-to-load-user-by-group_id)
-            - [How to load user by DB uuid?](#how-to-load-user-by-db-uuid)
-    - [Actions](#actions)
-        - [Description](#description-6)
-        - [Usage](#usage-6)
-            - [How to add one action?](#how-to-add-one-action)
-            - [How to update a action?](#how-to-update-a-action)
-            - [How to load all actions?](#how-to-load-all-actions)
-            - [How to filter actions?](#how-to-filter-actions)
-            - [How to delete action by ID?](#how-to-delete-action-by-id)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+Here's the content structured as a table in Markdown format:
+
+```markdown
+| Section        | Subsection      | Details                                                                |
+|----------------|-----------------|------------------------------------------------------------------------|
+| **[Main](#main)**         | [Client (API)](#client-api)  |                                                                        |
+|                | **[Multi API](#multi-api)**  |                                                                        |
+|                |                 | [DataModels](#datamodels)                                              |
+|                |                 | [Skeletons](#skeletons)                                                |
+|                |                 | ├── [Description](#description)                                        |
+|                |                 | ├── [Usage](#usage)                                                    |
+|                |                 | │   ├── [How to add list of skeletons?](#how-to-add-list-of-skeletons)  |
+|                |                 | │   ├── [How to add one skeleton?](#how-to-add-one-skeleton)            |
+|                |                 | │   ├── [How to update a skeleton?](#how-to-update-a-skeleton)          |
+|                |                 | │   ├── [How to load all skeletons?](#how-to-load-all-skeletons)        |
+|                |                 | │   ├── [How to load skeleton by ID?](#how-to-load-skeleton-by-id)      |
+|                |                 | │   ├── [How to load all the skeletons to Svaeva?](#how-to-load-all-the-skeletons-to-svaeva) |
+|                |                 | │   └── [How to delete a skeleton?](#how-to-delete-a-skeleton)          |
+|                |                 | [Wallet](#wallet)                                                       |
+|                |                 | ├── [Description](#description-1)                                      |
+|                |                 | ├── [Usage](#usage-1)                                                  |
+|                |                 | │   ├── [How to register your wallet?](#how-to-register-your-wallet)    |
+|                |                 | │   ├── [How to add one token?](#how-to-add-one-token)                  |
+|                |                 | │   ├── [How to update a token?](#how-to-update-a-token)                |
+|                |                 | │   └── [How to load all tokens?](#how-to-load-all-tokens)              |
+|                |                 | [Configuration](#configuration)                                        |
+|                |                 | ├── [Description](#description-1)                                      |
+|                |                 | ├── [Usage](#usage-1)                                                  |
+|                |                 | │   ├── [How to add one configs?](#how-to-add-one-configs)              |
+|                |                 | │   ├── [How to update a config?](#how-to-update-a-config)              |
+|                |                 | │   ├── [How to Load all configs?](#how-to-load-all-configs)            |
+|                |                 | │   ├── [How to Load config by ID?](#how-to-load-config-by-id)          |
+|                |                 | │   └── [How to delete a config?](#how-to-delete-a-config)              |
+|                |                 | [Virtual Bonds](#virtual-bonds)                                        |
+|                |                 | ├── [Description](#description-2)                                      |
+|                |                 | ├── [Usage](#usage-2)                                                  |
+|                |                 | │   ├── [How to add one virtual bond?](#how-to-add-one-virtual-bond)    |
+|                |                 | │   ├── [How to update a virtual bond?](#how-to-update-a-virtual-bond)  |
+|                |                 | │   ├── [How to load all virtual bonds?](#how-to-load-all-virtual-bonds)|
+|                |                 | │   ├── [How to load virtual bond by ID?](#how-to-load-virtual-bond-by-id) |
+|                |                 | │   └── [How to delete a virtual bond?](#how-to-delete-a-virtual-bond)  |
+|                | **[Data Storage](#data-storage)** |                                                    |
+|                |                 | [Platform](#platform)                                                  |
+|                |                 | ├── [Description](#description-3)                                      |
+|                |                 | ├── [Usage](#usage-3)                                                  |
+|                |                 | │   ├── [How to create a platform?](#how-to-create-a-platform)          |
+|                |                 | │   ├── [How to update a platform?](#how-to-update-a-platform)          |
+|                |                 | │   ├── [How to load all platforms?](#how-to-load-all-platforms)        |
+|                |                 | │   ├── [How to load platform by ID?](#how-to-load-platform-by-id)      |
+|                |                 | │
 
 ### Client (API)
 
