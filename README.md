@@ -73,6 +73,13 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
             - [How to load user by group_id?](#how-to-load-user-by-group_id)
             - [How to load user by DB uuid?](#how-to-load-user-by-db-uuid)
     - [Actions](#actions)
+        - [Description](#description-6)
+        - [Usage](#usage-6)
+            - [How to add one action?](#how-to-add-one-action)
+            - [How to update a action?](#how-to-update-a-action)
+            - [How to load all actions?](#how-to-load-all-actions)
+            - [How to filter actions?](#how-to-filter-actions)
+            - [How to delete action by ID?](#how-to-delete-action-by-id)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
