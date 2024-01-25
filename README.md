@@ -61,6 +61,35 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
 |                |                 | │   ├── [How to load all platforms?](#how-to-load-all-platforms)        |
 |                |                 | │   ├── [How to load platform by ID?](#how-to-load-platform-by-id)      |
 |                |                 | │
+|                |                 | │   └── [How to delete a platform?](#how-to-delete-a-platform)          |
+|                |                 | [Groups](#groups)                                                      |
+|                |                 | ├── [Description](#description-4)                                      |
+|                |                 | ├── [Usage](#usage-4)                                                  |
+|                |                 | │   ├── [How to add one group?](#how-to-add-one-group)                  |
+|                |                 | │   ├── [How to update a group?](#how-to-update-a-group)                |
+|                |                 | │   ├── [How to load all groups?](#how-to-load-all-groups)              |
+|                |                 | │   ├── [How to load group by ID?](#how-to-load-group-by-id)            |
+|                |                 | │   ├── [How to load group by model_name?](#how-to-load-group-by-model_name) |
+|                |                 | │   └── [How to delete a group?](#how-to-delete-a-group)                |
+|                |                 | [Users](#users)                                                        |
+|                |                 | ├── [Description](#description-5)                                      |
+|                |                 | ├── [Usage](#usage-5)                                                  |
+|                |                 | │   ├── [How to add one user?](#how-to-add-one-user)                    |
+|                |                 | │   ├── [How to update a user?](#how-to-update-a-user)                  |
+|                |                 | │   ├── [How to load all users?](#how-to-load-all-users)                |
+|                |                 | │   ├── [How to load user platform and platform uuid?](#how-to-load-user-platform-and-platform-uuid) |
+|                |                 | │   ├── [How to load user by group_id?](#how-to-load-user-by-group_id)  |
+|                |                 | │   └── [How to load user by DB uuid?](#how-to-load-user-by-db-uuid)    |
+|                |                 | [Actions](#actions)                                                    |
+|                |                 | ├── [Description](#description-6)                                      |
+|                |                 | ├── [Usage](#usage-6)                                                  |
+|                |                 | │   ├── [How to add one action?](#how-to-add-one-action)                |
+|                |                 | │   ├── [How to update a action?](#how-to-update-a-action)              |
+|                |                 | │   ├── [How to load all actions?](#how-to-load-all-actions)            |
+|                |                 | │   ├── [How to filter actions?](#how-to-filter-actions)                |
+|                |                 | │   └── [How to delete action by ID?](#how-to-delete-action-by-id)      |
+| **[License](#license)**      |                 |                                                                        |
+| **[Acknowledgments](#acknowledgments)** |                 |                                                                        |
 
 ### Client (API)
 
