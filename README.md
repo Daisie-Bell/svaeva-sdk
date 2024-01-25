@@ -736,5 +736,3 @@ If you have any questions or need further assistance, please refer to the docume
 Thank you for choosing Svaeva!
 
 ---
-
-[![Daisie Lab](https://daisie.com/wp-content/uploads/2021/03/Daisie_logos_-_transparent.png)](https://daisie.com/)
