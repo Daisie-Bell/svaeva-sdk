@@ -6,6 +6,10 @@ Problem: Grounding Language Agents in the real-world involves  integration acros
 Solution: Svaeva tries to solve this problem by allowing developers to construct ways of deploying agents that involves many different kinds of calls to external APIs handling different incoming data types. Essentailly, Svaeva is a meta-wrapper around RESTful APIs, connected to a database where incoming requests and outgoing results are stored and managed across different users appropriately.
 ## Installation
 
+```bash
+poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
+```
+
 ## Documentation
 
 ## Index
@@ -142,6 +146,8 @@ Docs: <br>
 #### Description
 
 Skeletons are Dictionary how allow to warp any API to make it compatible with the svaeva.
+
+[Docs](https://github.com/Daisie-Bell/VRest)
 
 #### Usage
 
@@ -576,34 +582,74 @@ Actions are used to manage the actions preformed in your platform. The svaeva SD
 
 #### Usage
 
+##### How to add one action?
+
+To set an action, use the following code:
+
+```python
+client.database.action.add({
+    "user_id":"test",
+    "group":"test_group",
+    "model_id":"costume_llm",
+    "skeleton_id":"open_ai",
+    "config_id":"jerry",
+    "status_message":"test",
+    "content_data":"test",
+    "content_type":"text",
+    "content_text":"test",
+})
+```
+
+##### How to update a action?
+
+to Update a specific action, use the following code:
+
+```python
+client.database.action.update(<json_action>)
+```
+
+##### How to load all actions?
+
 To list all available actions, use the following code:
 
 ```python
 client.database.action()
 ```
 
-To list a specific action by ID, use the following code:
+##### How to filter actions?
 
-```python
-client.database.action(id='{action_id}')
+If you want to filter the actions, use the following code:
+
+Options:
+```json
+{
+    "user_id":<user_id>,
+    "group":<group>,
+    "model_id":<model_id>,
+    "skeleton_id":<skeleton_id>,
+    "config_id":<config_id>,
+    "status_message":<status_message>,
+}
 ```
 
-To list a specific action by model_id
+you can combine the option as you want.
+
+Example:
 ```python
-client.database.action(model_id='{model_id}')
+client.database.action(user_id="test",group="test_group")
+client.database.action(user_id="test",model_id="costume_llm")
+client.database.action(user_id="test",skeleton_id="open_ai")
+client.database.action(user_id="test",config_id="jerry")
 ```
 
+##### How to delete action by ID?
 
-To list a specific action by user_id
-
-```python
-client.database.action(user_id='{user_id}')
-```
-
-To list a specific action by group_id
+to Delete a specific action, use the following code:
 
 ```python
-client.database.action(group_id='{group_id}')
+client.database.action.__delattr__(<id>)
+or 
+del client.database.action.<id>
 ```
 
 ## License
@@ -626,4 +672,14 @@ Vortex5Root - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - S
 
 ## Conclusion
 
-...
+In conclusion, the Svaeva SDK provides a powerful set of functions for managing platforms, groups, users, and actions in your application. With the ability to create, update, load, and delete various entities, you have full control over your platform's data storage and organization. The SDK offers a user-friendly interface and flexible options for filtering and managing actions. 
+
+We would like to express our gratitude to Daisie Lab and Svaeva for their contributions to this project. Their expertise and support have been invaluable in the development of this SDK.
+
+If you have any questions or need further assistance, please refer to the documentation or reach out to our team. We are committed to providing the best possible experience for developers using the Svaeva SDK.
+
+Thank you for choosing Svaeva!
+
+---
+
+[![Daisie Lab](https://daisie.com/wp-content/uploads/2021/03/Daisie_logos_-_transparent.png)](https://daisie.com/)
