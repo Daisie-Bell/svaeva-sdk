@@ -209,4 +209,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 DataModel framework provides a solution to the problem of handling data in code by offering a structured approach and a set of functions for managing data flow. It aims to improve data management efficiency and organization in applications. Developers can easily integrate DataModel into their code and benefit from its features for handling and manipulating data.
 
-This project is a work in progress. We are constantly adding new features and improving the existing ones. If you have any suggestions or feedback, please feel free to contact us at [send email](mailto: leonardo.leitao@research.fchampalimaud.org "send email"). We would love to hear from you!
+This project is a work in progress. We are constantly adding new features and improving the existing ones. If you have any suggestions or feedback, please feel free to contact us at [send email](mailto:leonardo.leitao@research.fchampalimaud.org "send email"). We would love to hear from you!
