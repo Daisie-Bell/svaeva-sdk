@@ -184,7 +184,7 @@ This code loads a list of skeletons from a JSON file called "Blue_paper.json", c
 
 To set skeleton, use the following code:
 
-***All the Skeletons are Stored in a DataBase, so you can use the same skeleton in different projects. Only load once***
+***All the Skeletons are Stored in a DataBase, so you can use the same skeleton in different projects. Only loading once***
 
 ```python
 client.multi_api.skeleton.<id> = {
