@@ -19,7 +19,7 @@ class DataModel:
     configs : Dict = {}
     cash : Dict = {}
 
-    def start(self,token):
+    def __init__(self,token):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.setLevel(logging.DEBUG)
         self.logger.addHandler(logging.StreamHandler())
