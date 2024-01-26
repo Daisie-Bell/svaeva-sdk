@@ -6,7 +6,7 @@
 # DataProgramming
 
 | Problem Statement | Solution |
-
+|-------------------|----------|
 | The problem that Data Programming aims to solve is the lack of a standardized and efficient way to handle data in code. Data Programming provides a solution by offering a framework for building data crickets, which are responsible for managing the flow of data in an application. By using Data Programming, developers can easily handle and manipulate data in their code, leading to more organized and efficient data management. |
 
 Data Programming aims to solve the problem of the lack of a standardized and efficient way to handle data in code. It provides a framework for building data crickets, which are responsible for managing the flow of data in an application.
