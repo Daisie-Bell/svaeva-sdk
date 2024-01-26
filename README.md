@@ -157,7 +157,7 @@ This Tool allow the user to create Data Models and manage Multiple API.
 
 ### DataModels
 
-Docs: <br>
+Click on the Temple to see the documentation for DataModels: <br><br>
 <a href="./svaeva/Paths/MultiAPI/Models/README.md" class="button">
     <img src="./icons/temple-of-heaven-china-svgrepo-com.svg" alt="Return" width="40" height="40" class="icon">
 </a>
@@ -170,7 +170,7 @@ Docs: <br>
 
 Skeleton is a configuration file that contains the API endpoint, headers, and available functions. The svaeva SDK provides a set of methods for managing skeletons:
 
-[Docs](https://github.com/Daisie-Bell/VRest)
+[Click here to see the documentation of VRest](https://github.com/Daisie-Bell/VRest)
 
 #### Usage
 
@@ -710,7 +710,7 @@ client.database.action(user_id="test",config_id="jerry")
 
 ##### How to delete action by ID?
 
-to Delete a specific action, use the following code:
+To delete a specific action, use the following code:
 
 ```python
 client.database.action.__delattr__(<id>)
@@ -730,7 +730,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Authors 
 
 [Coder / Manager]
-Vortex5Root - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - Svaeva)
+[Vortex5Root](https://github.com/Vortex5Root) - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - Svaeva)
 
 [Colaborators]
 [elacosse - (Researcher - Daisie Lab - Svaeva)]

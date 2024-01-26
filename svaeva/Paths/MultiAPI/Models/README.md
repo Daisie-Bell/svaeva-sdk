@@ -19,38 +19,44 @@ Overall, Data Programming provides a solution to the problem by offering a struc
 
 ## Installation
 
-[Click Me](../../../../README.md#installation)
+[Click here](../../../../README.md#installation)
 
 ## Dependencies
 
-[Click Me](../../../../README.md#dependencies)
+[Click here](../../../../README.md#dependencies)
 
 # Index
+| Section                           | Subsection                             | Details                            |
+|-----------------------------------|----------------------------------------|------------------------------------|
+| **[DataProgramming](#dataprogramming)**   |                                        |                                    |
+|   - Problem Statement             | [Link](#problem-statement)             |                                    |
+|   - Solution                     | [Link](#solution)                      |                                    |
+|   - Installation                 | [Link](#installation)                  |                                    |
+|   - Dependencies                 | [Link](#dependencies)                  |                                    |
+| [Index](#index)                   |                                        |                                    |
+| [Documentation](#documentation)   |                                        |                                    |
+|   - How to start using data models? | [Link](#how-to-start-using-data-models) |                                    |
+|     - what is the DataModel?     | [Link](#what-is-the-datamodel)         |                                    |
+|     - Structure                  | [Link](#structure)                    |                                    |
+|       - Attributes               | [Link](#attributes)                   |                                    |
+|       - Methods                 | [Link](#methods)                      |                                    |
+|   - Pseudo Code                  | [Link](#pseudo-code)                  |                                    |
+|     - Functions                  | [Link](#functions)                    |                                    |
+|       - `start(token* : str)`    | [Link](#starttoken--str)             |                                    |
+|       - `add_model(model_name* : str)` | [Link](#add_modelmodel_name--str)  |                                    |
+|       - `self.load_wallet() -> None:` | [Link](#selfload_wallet---none)     |                                    |
+|       - `get_config(name : str) -> dict:` | [Link](#get_configname--str---dict) |                                    |
+|       - `load_dataconfig(data)`   | [Link](#load_dataconfigdata)         |                                    |
+|       - `store(self,data,skeleton,config=None,user=False)` | [Link](#storeselfdataskeletonconfignoneuserfalse) |                            |
+|       - `normalizer(self,data):`   | [Link](#normalizerselfdata)         |                                    |
+|       - `forward(self,data):`      | [Link](#forwardselfdata)            |                                    |
+|   - DataModel Examples           | [Link](#datamodel-examples)           |                                    |
+|     - License                    | [Link](#license)                      |                                    |
+|     - Acknowledgments            | [Link](#acknowledgments)              |                                    |
+|     - Authors                    | [Link](#authors)                      |                                    |
+|     - Conclusion                 | [Link](#conclusion)                   |                                    |
 
-- [DataProgramming](#dataprogramming)
-  - [Problem Statement](#problem-statement)
-  - [Solution](#solution)
-  - [Installation](#installation)
-  - [Dependencies](#dependencies)
-- [Index](#index)
-- [Documentation](#documentation)
-  - [How to start using data models?](#how-to-start-using-data-models)
-    - [what is the DataModel?](#what-is-the-datamodel)
-    - [Structure](#structure)
-      - [Attributes](#attributes)
-      - [Methods](#methods)
-  - [Pseudo Code](#pseudo-code)
-    - [Fuctions](#fuctions)
-      - [`start(token* : str)`](#starttoken--str)
-      - [`add_model(model_name* : str)`](#add_modelmodel_name--str)
-      - [`self.load_wallet() -> None:`](#selfload_wallet---none)
-      - [`get_config(name : str) -> dict:`](#get_configname--str---dict)
-      - [`load_dataconfig(data)`](#load_dataconfigdata)
-      - [`store(self,data,skeleton,config=None,user=False)`](#storeselfdataskeletonconfignoneuserfalse)
-      - [`normalizer(self,data):`](#normalizerselfdata)
-      - [`forward(self,data):`](#forwardselfdata)
-  - [DataModel Exemples](#datamodel-exemples)
-
+    
 # Documentation
 
 ## How to start using data models?
@@ -105,55 +111,55 @@ This function is used to start the connection with Svaeva API. It is required to
 
 ##### Backend
 ```
-this function will create:
+This function will create:
 - self.token (this is the token used to connect to the API)
 - self.svaeva (this is the object used to connect to the API)
 - self.name = self.__class__.__name__ (this is the name of the model)
 ```
 
 #### `add_model(model_name* : str)`
-This function allows you to add external api models in to your data code.
+- This function allows you to add external api models in to your data code.
 
 ##### Backend
 ```
-this function adds a key in to a dictionary named ai_models.
+- This function adds a key in to a dictionary named ai_models.
 - ai_models will contain the VRest objects. (after load_wallet)
 ```
 
 #### `self.load_wallet() -> None:`
-this function will load all your API keys and start the RestAPI Object to interact with the External APIs.
+- This function will load all your API keys and start the RestAPI Object to interact with the External APIs.
 
 ##### Backend
 
 ```
-this function will call svaeva to get all your API keys for the external APIs;
-this function will get all the Skeletons for call external APIs;
-this function will update the ai_models dictionary with the VRest objects.
+This function will call svaeva to get all your API keys for the external APIs;
+This function will get all the Skeletons for call external APIs;
+This function will update the ai_models dictionary with the VRest objects.
 ```
 
 #### `get_config(name : str) -> dict:`
 
-this function calls svaeva api to get a configuration to use in your data code.
+- This function calls svaeva api to get a configuration to use in your data code.
 
 ##### Backend
 ```
-this function will call svaeva to get a config;
-this function will update the configs dict with the config.
+This function will call svaeva to get a config;
+This function will update the configs dict with the config.
 ```
 
 #### `load_dataconfig(data)`
-this function will load all your data configurations from the user group.
+- This function will load all your data configurations from the user group.
 
 ##### Backend
 ```
-this function will call svaeva to check if is a valid user;
-this function will get the group from the user;
-this function will get all the data configs from the group;
-this function will update the data_configs dict with the data configs.
+This function will call svaeva to check if is a valid user;
+This function will get the group from the user;
+This function will get all the data configs from the group;
+This function will update the data_configs dict with the data configs.
 ```
 
 #### `store(self,data,skeleton,config=None,user=False)`
-this function will store a action in the database.
+- This function will store a action in the database.
 
 ##### Backend
 ```
@@ -202,10 +208,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Authors 
 
 [Coder / Manager]
-Vortex5Root - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - Svaeva)
+[Vortex5Root](https://github.com/Vortex5Root) - (Engineering Manager,Full-Stack Software Engineer - Daisie Lab - Svaeva)
 
 [Colaborators]
 [elacosse - (Researcher - Daisie Lab - Svaeva)]
 
-
 ## Conclusion
+
+DataModel framework provides a solution to the problem of handling data in code by offering a structured approach and a set of functions for managing data flow. It aims to improve data management efficiency and organization in applications. Developers can easily integrate DataModel into their code and benefit from its features for handling and manipulating data.
+
+This project is a work in progress. We are constantly adding new features and improving the existing ones. If you have any suggestions or feedback, please feel free to contact us at [send email](mailto: leonardo.leitao@research.fchampalimaud.org "send email"). We would love to hear from you!
