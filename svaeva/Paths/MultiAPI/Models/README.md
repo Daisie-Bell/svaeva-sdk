@@ -20,11 +20,6 @@
 # Index
 | Section                           | Subsection                             | Details                            |
 |-----------------------------------|----------------------------------------|------------------------------------|
-| **[DataProgramming](#dataprogramming)**   |                                        |                                    |
-|   - Problem Statement             | [Link](#problem-statement)             |                                    |
-|   - Solution                     | [Link](#solution)                      |                                    |
-|   - Installation                 | [Link](#installation)                  |                                    |
-|   - Dependencies                 | [Link](#dependencies)                  |                                    |
 | [Index](#index)                   |                                        |                                    |
 | [Documentation](#documentation)   |                                        |                                    |
 |   - How to start using data models? | [Link](#how-to-start-using-data-models) |                                    |
