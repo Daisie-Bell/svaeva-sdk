@@ -8,6 +8,7 @@
 ## Dependencies
 
 - [python3.11.2](https://www.python.org/downloads/release/python-3112/)
+- [poetry](https://python-poetry.org/)
 - [requests](https://pypi.org/project/requests/)
 - [VRest](https://github.com/Vortex5Root/VRest)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
