@@ -22,6 +22,10 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
 
 ## Documentation
 
+## How-to - Use-cases
+
+[Link to Usecase version 1.0]()
+
 ## Index
 
 | Section        | Subsection      | Details                                                                |
