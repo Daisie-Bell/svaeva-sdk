@@ -27,18 +27,18 @@ poetry add git+https://github.com/Daisie-Bell/svaeva-sdk.git
 Types of Users:
 Researchers using Svaeva vs. Clients on Platform
 
-| Terms | Definition | Researchers | Clients |
-|-------|------------|-------------|---------|
-| Skeleton | A Skeleton is a dict that contains the API endpoint, headers, and available functions. | ✅ |  |
-| Virtual Bond (Data Models) | A Virtual Bond is a python code that connects multiple APIS allowing the user to create dynamic data flows between different APIS and their components. | ✅ |  |
-| Wallet | A Wallet is where the user can store and manage his tokens for the different APIs. | ✅ |  |
-| Config | A Config is used to set the parameters for specific skeleton functions (API paths). | ✅ |  |
-| Platform | platform is used to allow the user to create platforms for interecting with the Virtual Bonds. | Mange | ✅ |
-| Action | Action are all the outputs from the different APIS and the user interactions. | Mange | ✅ |
-| User | User are used to manage the users of your platform. | Mange | ✅ |
-| Group | Group are used to organize the user of your platform. | Mange | ✅ |
-| Token-Group | Token-Group is used to handle Svaeva API access group | Master only |   |
-| Token-User | Token-User is used to give access to Svaeva API | Master only |  |
+| Terms | Definition | Scope |
+|-------|------------|-------------|
+| Skeleton | A dictionary with the API endpoint, headers, and available functions. | Researcher |
+| Virtual Bond (Data Models) | Python code connecting multiple APIs that define the dynamic data flows between different endpoints and their components. | Researcher |
+| Wallet | Store and manage external API keys, i.e., tokens, for the endpoints used. | Researcher |
+| Config | The set the parameters for specific skeleton functions, i.e., API endpoints. | Researcher |
+| Platform | e.g., WhatsApp, Telegram, allowing clients to interface with Virtual Bonds. | Client |
+| Action | JsonModel that store any results from the different APIs and the user interactions. | Client |
+| User | Clients that inferface with the platform | Client |
+| Group | Group are used to organize the user of your platform. | Client |
+| Token-Group | Token-Group is used to handle Svaeva API access group | Root/Researcher |
+| Token-User | Token-User is used to give access to Svaeva API to Researchers | Root/Researcher |
 
 ## How-To - Use-cases
 
