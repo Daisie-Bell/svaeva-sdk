@@ -17,7 +17,7 @@
 ## Installation
 
 ```bash
-poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
+poetry add git+https://github.com/Daisie-Bell/svaeva-sdk.git
 ```
 
 ## Documentation
