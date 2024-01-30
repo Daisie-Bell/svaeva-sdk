@@ -22,24 +22,23 @@ poetry add git+https://github.com/Daisie-Bell/svaeva-sdk.git
 
 ## Documentation
 
-## Glossery of Terminology
+## Glossary of Terminology
 
 Types of Users:
 Researchers using Svaeva vs. Clients on Platform
 
-| Terms | Definition |
-|-------|------------|
-| Skeleton | A Skeleton is a dict that contains the API endpoint, headers, and available functions. |
-| Virtual Bond (Data Models) | A Virtual Bond is a python code that connects multiple APIS allowing the user to create dynamic data flows between different APIS and their components. | 
-| Wallet | A Wallet is where the user can store and manage his tokens for the different APIs. |
-| Config | A Config is used to set the parameters for specific skeleton functions (API paths). |
-
-| Platform | platform is used to allow the user to create platforms for interecting with the Virtual Bonds. |
-| Action | Action are all the outputs from the different APIS and the user interactions. |
-| User | User are used to manage the users of your platform. |
-| Group | Group are used to organize the user of your platform. |
-| Token-Group | Token-Group is used to handle Svaeva API access group |
-| Token-User | Token-User is used to give access to Svaeva API |
+| Terms | Definition | Researchers | Clients |
+|-------|------------|-------------|---------|
+| Skeleton | A Skeleton is a dict that contains the API endpoint, headers, and available functions. | ✅ |  |
+| Virtual Bond (Data Models) | A Virtual Bond is a python code that connects multiple APIS allowing the user to create dynamic data flows between different APIS and their components. | ✅ |  |
+| Wallet | A Wallet is where the user can store and manage his tokens for the different APIs. | ✅ |  |
+| Config | A Config is used to set the parameters for specific skeleton functions (API paths). | ✅ |  |
+| Platform | platform is used to allow the user to create platforms for interecting with the Virtual Bonds. | Mange | ✅ |
+| Action | Action are all the outputs from the different APIS and the user interactions. | Mange | ✅ |
+| User | User are used to manage the users of your platform. | Mange | ✅ |
+| Group | Group are used to organize the user of your platform. | Mange | ✅ |
+| Token-Group | Token-Group is used to handle Svaeva API access group | Master only |   |
+| Token-User | Token-User is used to give access to Svaeva API | Master only |  |
 
 ## How-To - Use-cases
 
