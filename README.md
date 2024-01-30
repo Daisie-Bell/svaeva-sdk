@@ -22,7 +22,26 @@ poetry add https://github.com/Daisie-Bell/svaeva-sdk.git
 
 ## Documentation
 
-## How-to - Use-cases
+## Glossery of Terminology
+
+Types of Users:
+Researchers using Svaeva vs. Clients on Platform
+
+Terms:
+Skeleton
+Virtual Bond
+Models
+Wallet
+Config
+
+Platform
+Action
+User
+Group
+Token-Group
+Token-User
+
+## How-To - Use-cases
 
 [Link to Usecase version 1.0]()
 
