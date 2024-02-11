@@ -22,7 +22,7 @@ class Client:
     
     def env(self):
         if self.base_url == "":
-            self.base_url = "http://{}:8000".format(os.getenv("SVAEVA_IP"))
+            self.base_url = "http://{}:{}".format(os.getenv("SVAEVA_IP"),os.getenv("SVAEVA_PORT"))
         if self.headers["token"] == "":
             self.headers["token"] = os.getenv("Svaeva_Key")
 
