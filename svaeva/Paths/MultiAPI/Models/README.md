@@ -49,7 +49,7 @@
 ## How to start using data models?
 
 ```python
-from dataprogramming import DataModel
+from svaeva.Paths.MultiAPI.Models import DataModel
 
 class MyModel(DataModel):
     def __init__(self, token):
