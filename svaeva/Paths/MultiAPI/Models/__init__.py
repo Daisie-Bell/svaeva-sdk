@@ -84,6 +84,8 @@ class DataModel:
             "content_text": str(data[data["type"]]),
             "platform": data["platform"]
         }
+        if "type" in data.keys():
+            action["content_type"] = data["type"]
         self.svaeva.database.actions.add(action)
         self.logger.debug("Action added: %s",action)
 
