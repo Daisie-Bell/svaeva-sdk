@@ -30,6 +30,10 @@ class Actions:
             temp_params.update({"config_id":kwds["config_id"]})
         if "status_message" in kwds.keys():
             temp_params.update({"status_message":kwds["status_message"]})
+        if "platform" in kwds.keys():
+            temp_params.update({"platform":kwds["platform"]})
+        if "content_type" in kwds.keys():
+            temp_params.update({"content_type":kwds["content_type"]})
         if temp_params != {}:
             response = self.session.get(f"{self.base_url}{self.path}",params=temp_params)
             if response.status_code == 200:
