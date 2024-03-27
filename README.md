@@ -87,12 +87,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [Colaborators]
 
-<a href="https://github.com/elacosse">
-    <div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 400px;">
-        <img src=https://avatars.githubusercontent.com/u/20797023?v=4 width=50 style="border-radius: 50%;">
-        <a href="https://github.com/elacosse">elacosse <br><b>{Researcher - Daisie Lab - Svaeva}</b> </a>
-    </div>
-</a>
+<div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 400px;">
+    <img src=https://avatars.githubusercontent.com/u/20797023?v=4 width=50 style="border-radius: 50%;">
+    <a href="https://github.com/elacosse">elacosse <br><b>{Researcher - Daisie Lab - Svaeva}</b> </a>
+</div>
 
 
 ## Conclusion
