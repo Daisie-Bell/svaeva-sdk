@@ -7,27 +7,24 @@
 
 # Documentation Svaeva SDK (Skeletons)
 
-## Main Index
+
+# Main Documentation
 
 | Topics | SubTopic | SubSubTopic |
 | ----- | ----- | ----- |
-| [ReadME](../README.md) |  |  |
+| [ReadME](../../../README.md) |  |  |
 | [Main_Documentation](../../Main.md) |  |  |
-|  └── | [Client](#Client) |  |
-|   | └── | [Description](#Description) |
-|   | └── | [Usage](#Usage) |
-|   | └── | [How to start the client?](#How-to-start-the-client) |
 |   | DataBase |  |
 |   |  └──     | [Platforms](../../DataBase/Platforms/README.md) |
 |   |  └──     | [Groups](../../DataBase/Groups/README.md) |
 |   |  └──     | [Users](../../DataBase/Users/README.md) |
 |   |  └──     | [Actions](../../DataBase/Actions/README.md) |
 |   | MultiAPI |  |
-|   |  └──     | [Data-Models](../DataModels/README.md) |
-|   |  └──     | [Virtual_Bounds](../VirtualBounds/README.md) |
-|   |  └──     | [Skeletons](../Skeletons/README.md) |
-|   |  └──     | [Configurations](../Configurations/README.md) |
-|   |  └──     | [Wallets](../MultiAPI/Wallets/README.md) |
+|   |  └──     | [Data-Models](../../DataModels/README.md) |
+|   |  └──     | [Virtual_Bounds](../../VirtualBounds/README.md) |
+|   |  └──     | [Skeletons](../../Skeletons/README.md) |
+|   |  └──     | [Configurations](../../Configs/README.md) |
+|   |  └──     | [Wallets](../../MultiAPI/Wallets/README.md) |
 
 ## Documentation Index
 

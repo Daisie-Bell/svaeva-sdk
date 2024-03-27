@@ -11,22 +11,18 @@
 
 | Topics | SubTopic | SubSubTopic |
 | ----- | ----- | ----- |
-| [ReadME](../README.md) |  |  |
-| [Main_Documentation](#Documentation) |  |  |
-|  └── | [Client](#Client) |  |
-|   | └── | [Description](#Description) |
-|   | └── | [Usage](#Usage) |
-|   | └── | [How to start the client?](#How-to-start-the-client) |
+| [ReadME](../../../README.md) |  |  |
+| [Main_Documentation](../../Main.md) |  |  |
 |   | DataBase |  |
-|   |  └──     | [Platforms](../DataBase/Platforms/README.md) |
-|   |  └──     | [Groups](../DataBase/Groups/README.md) |
-|   |  └──     | [Users](../DataBase/Users/README.md) |
-|   |  └──     | [Actions](../DataBase/Actions/README.md) |
+|   |  └──     | [Platforms](../../DataBase/Platforms/README.md) |
+|   |  └──     | [Groups](../../DataBase/Groups/README.md) |
+|   |  └──     | [Users](../../DataBase/Users/README.md) |
+|   |  └──     | [Actions](../../DataBase/Actions/README.md) |
 |   | MultiAPI |  |
 |   |  └──     | [Data-Models](../../DataModels/README.md) |
 |   |  └──     | [Virtual_Bounds](../../VirtualBounds/README.md) |
 |   |  └──     | [Skeletons](../../Skeletons/README.md) |
-|   |  └──     | [Configurations](../../Configurations/README.md) |
+|   |  └──     | [Configurations](../../Configs/README.md) |
 |   |  └──     | [Wallets](../../MultiAPI/Wallets/README.md) |
 
 ## Documentation Index
@@ -121,7 +117,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](../../LICE
 
 <a href="https://github.com/Vortex5Root">
     <div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 450px;">
-        <img src=https://avatars.githubusercontent.com/u/102427260?v=4 width=50 style="border-radius: 50%;"></img>
+        <img src=https://avatars.githubusercontent.com/u/102427260?v=4 width=30 style="border-radius: 50%;"></img>
         <a href="https://github.com/Vortex5Root">Vortex5Root <br><b>        {Full-Stack Software Engineer - Daisie Lab - Svaeva}</b></a>
     </div>
 </a>
@@ -131,7 +127,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](../../LICE
 
 <a href="https://github.com/elacosse">
     <div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 400px;">
-        <img src=https://avatars.githubusercontent.com/u/20797023?v=4 width=50 style="border-radius: 50%;">
+        <img src="https://avatars.githubusercontent.com/u/20797023?v=4" width="30" style="border-radius: 50%;">
         <a href="https://github.com/elacosse">elacosse <br><b>{Researcher - Daisie Lab - Svaeva}</b> </a>
     </div>
 </a>
