@@ -19,11 +19,12 @@
 |   |  └──     | [Users](../../DataBase/Users/README.md) |
 |   |  └──     | [Actions](../../DataBase/Actions/README.md) |
 |   | MultiAPI |  |
-|   |  └──     | [Data-Models](../../DataModels/README.md) |
-|   |  └──     | [Virtual_Bounds](../../VirtualBounds/README.md) |
-|   |  └──     | [Skeletons](../../Skeletons/README.md) |
-|   |  └──     | [Configurations](../../Configs/README.md) |
+|   |  └──     | [Data-Models](../../MultiAPI/DataModels/README.md) |
+|   |  └──     | [Virtual_Bounds](../../MultiAPI/VirtualBounds/README.md) |
+|   |  └──     | [Skeletons](../../MultiAPI/Skeletons/README.md) |
+|   |  └──     | [Configurations](../../MultiAPI/Configs/README.md) |
 |   |  └──     | [Wallets](../../MultiAPI/Wallets/README.md) |
+
 
 ## Documentation Index
 
