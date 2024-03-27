@@ -21,7 +21,7 @@
 |   |  └──     | [Actions](../../DataBase/Actions/README.md) |
 |   | MultiAPI |  |
 |   |  └──     | [Data-Models](../../MultiAPI/DataModels/README.md) |
-|   |  └──     | [Virtual_Bounds](../../MultiAPI/VirtualBounds/README.md) |
+|   |  └──     | [Virtual_Bounds](../../MultiAPI/Virtual Bounds/README.md) |
 |   |  └──     | [Skeletons](../../MultiAPI/Skeletons/README.md) |
 |   |  └──     | [Configurations](../../MultiAPI/Configs/README.md) |
 |   |  └──     | [Wallets](../../MultiAPI/Wallets/README.md) |
