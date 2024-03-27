@@ -13,10 +13,6 @@
 | ----- | ----- | ----- |
 | [ReadME](../README.md) |  |  |
 | [Main_Documentation](#Documentation) |  |  |
-|  └── | [Client](#Client) |  |
-|   | └── | [Description](#Description) |
-|   | └── | [Usage](#Usage) |
-|   | └── | [How to start the client?](#How-to-start-the-client) |
 |   | DataBase |  |
 |   |  └──     | [Platforms](./DataBase/Platforms/README.md) |
 |   |  └──     | [Groups](./DataBase/Groups/README.md) |
