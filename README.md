@@ -31,7 +31,7 @@
 
 |  python3.11.*  | [python3.11.2](https://www.python.org/downloads/release/python-3112/) |
 |-------|-----------|
-| [![poetry](https://python-poetry.org/images/logo-origami.svg=10x10)](https://python-poetry.org/) | 1.5.1 ✅ |
+| <div style="display: flex; justify-content: center; align-items: center; height: 20px; width: 100px;">    <img src=https://python-poetry.org/images/logo-origami.svg width=20 style="border-radius: 50%;"></img><a href="https://python-poetry.org">Poetry</a></div> | 1.5.1 ✅ |
 | [requests](https://pypi.org/project/requests/) | ^2.31.0  ✅ | 
 | [python-dotenv](https://pypi.org/project/python-dotenv/) | ^1.0.0 ✅ |
 | [VRest](https://github.com/Vortex5Root/VRest) | 3.11.*  ✅ | 
