@@ -30,6 +30,7 @@
 
 | Section | Subsection | Questions |
 | ------- | ---------- | ------- |
+| [Installation](#Installation) |  |  |
 | [Client](#Client) |  |  |
 |    └──  | [Description](#Description) |  |
 |    └──  | [Usage](#Usage) |  |
@@ -39,21 +40,11 @@
 |    └──  | [Acknowledgments](#Acknowledgments) |  |
 |    └──  | [Authors](#Authors) |  |
 
+## Installation
 
-
-# Client (API)
-
-> The `Client` is the class responsible for managing svaeva API calls.
-
-<a href="https://www.google.com">
-    <img src="../icons/Daisie_logos_-_transparent.png" alt="Cloud Solution" width="50" height="50"></img>
-    cloud solution
-</a>
-
-<a href="https://github.com/daisie-lab/SvaevaAPI">
-    <img src="../icons/open_source.png" alt="Cloud Solution" width="50" height="50"></img>
-    local solution
-</a>
+```bash
+poetry add git+https://github.com/Daisie-Bell/svaeva-sdk.git
+```
 
 ## Client
 

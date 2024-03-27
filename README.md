@@ -36,11 +36,20 @@
 | [python-dotenv](https://pypi.org/project/python-dotenv/) | ^1.0.0 ✅ |
 | [VRest](https://github.com/Vortex5Root/VRest) | 3.11.*  ✅ | 
 
-## Installation
 
-```bash
-poetry add git+https://github.com/Daisie-Bell/svaeva-sdk.git
-```
+# Client (API)
+
+> The `Client` is the class responsible for managing svaeva API calls.
+
+<a href="https://www.google.com">
+    <img src="../icons/Daisie_logos_-_transparent.png" alt="Cloud Solution" width="50" height="50"></img>
+    cloud solution
+</a>
+
+<a href="https://github.com/daisie-lab/SvaevaAPI">
+    <img src="../icons/open_source.png" alt="Cloud Solution" width="50" height="50"></img>
+    local solution
+</a>
 
 ## Glossary of Terminology
 
