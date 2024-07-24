@@ -132,8 +132,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](../../LICE
 
 <a href="https://github.com/Vortex5Root">
     <div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 450px;">
-        <img src=https://avatars.githubusercontent.com/u/102427260?v=4 width=50 style="border-radius: 50%;"></img>
-        <a href="https://github.com/Vortex5Root">Vortex5Root <br><b>        {Full-Stack Software Engineer - Daisie Lab - Svaeva}</b></a>
+        <img src=https://avatars.githubusercontent.com/u/102427260?s=96&v=4 width=50 style="border-radius: 50%;">
+        <a href="https://github.com/Vortex5Root">Vortex5Root <br><b>        {Full-Stack Software Engineer}</b></a>
     </div>
 </a>
 
